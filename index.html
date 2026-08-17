@@ -129,73 +129,108 @@
 
     </section><!-- /About Section -->
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
+<!-- Skills Section -->
+<style>
+  .skills-category {
+    margin-bottom: 25px;
+  }
+  .skills-category h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #555;
+  }
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .skill-square {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 10px 18px;
+    border-radius: 4px; /* Keeps it square but slightly softened */
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+  .skill-square:hover {
+    background-color: #007bff; /* Change this to match your theme's primary color */
+    color: #fff;
+    border-color: #007bff;
+    transform: translateY(-2px);
+  }
+</style>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-      </div><!-- End Section Title -->
+<section id="skills" class="skills section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Skills</h2>
+  </div><!-- End Section Title -->
 
-        <div class="row skills-content skills-animation">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
+    <div class="row">
+      <div class="col-12">
+        
+        <!-- Programming Languages -->
+        <div class="skills-category">
+          <h3>Programming Languages</h3>
+          <div class="skills-list">
+            <span class="skill-square">Python</span>
+            <span class="skill-square">Java</span>
+            <span class="skill-square">C++</span>
+            <span class="skill-square">C</span>
+            <span class="skill-square">Vue</span>
+            <span class="skill-square">Django</span>
+            <span class="skill-square">JavaScript</span>
+            <span class="skill-square">CSS</span>
+            <span class="skill-square">HTML</span>
+            <span class="skill-square">Node.js</span>
+            <span class="skill-square">React</span>
+            <span class="skill-square">PyTorch</span>
+            <span class="skill-square">TensorFlow</span>
+            <span class="skill-square">SQL</span>
+            <span class="skill-square">SDL Game Programming</span>
           </div>
+        </div>
 
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
+        <!-- Development Practices -->
+        <div class="skills-category">
+          <h3>Development Practices</h3>
+          <div class="skills-list">
+            <span class="skill-square">Version Control (Git)</span>
+            <span class="skill-square">Linux</span>
+            <span class="skill-square">Docker</span>
           </div>
+        </div>
 
+        <!-- AI/ML Concepts -->
+        <div class="skills-category">
+          <h3>AI/ML Concepts</h3>
+          <div class="skills-list">
+            <span class="skill-square">Reinforcement Learning</span>
+          </div>
+        </div>
+
+        <!-- Digital Media and Design -->
+        <div class="skills-category">
+          <h3>Digital Media & Design</h3>
+          <div class="skills-list">
+            <span class="skill-square">Blender (3D Modeling & Animation)</span>
+            <span class="skill-square">Adobe Photoshop</span>
+            <span class="skill-square">Adobe After Effects</span>
+          </div>
         </div>
 
       </div>
+    </div>
 
-    </section><!-- /Skills Section -->
+  </div>
+</section><!-- End Skills Section -->
 
     <!-- Resume Section -->
     <section id="resume" class="resume section">
