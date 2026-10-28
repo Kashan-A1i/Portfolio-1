@@ -19,9 +19,9 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #f4f6f9; /* Soft stone/off-white background for natural eye comfort and smooth transitions */
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
+  --heading-color: #3b454f; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -29,9 +29,9 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #45505b;  /* The default color of the main navmenu links */
+  --nav-color: #3b454f;  /* The default color of the main navmenu links */
   --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-mobile-background-color: #f4f6f9; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
@@ -40,7 +40,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f9f9f9;
+  --background-color: #edf0f5;
   --surface-color: #ffffff;
 }
 
@@ -214,7 +214,7 @@ h6 {
   list-style: none;
   padding: 0 0 20px 0;
   margin: 0;
-  width: 140px;
+  width: max-content;
 }
 
 .navmenu a,
@@ -227,9 +227,14 @@ h6 {
   margin-bottom: 8px;
   font-size: 15px;
   border-radius: 50px;
-  background: color-mix(in srgb, var(--default-color), transparent 92%);
+  background: rgba(226, 232, 240, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
   height: 56px;
   width: 100%;
+  white-space: nowrap;
   overflow: hidden;
   transition: 0.3s;
 }
@@ -241,7 +246,7 @@ h6 {
 
 .navmenu a span,
 .navmenu a:focus span {
-  padding: 0 5px 0 7px;
+  padding: 0 6px 0 8px;
 }
 
 @media (min-width: 992px) {
@@ -267,7 +272,8 @@ h6 {
 
 .navmenu a:hover,
 .navmenu li:hover>a {
-  max-width: 100%;
+  max-width: 240px;
+  padding-right: 22px;
   color: var(--contrast-color);
 }
 
@@ -532,12 +538,27 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 35%;
+  filter: brightness(1.16) contrast(1.02);
   z-index: 1;
 }
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 26, 34, 0.15) 0%,
+      rgba(20, 26, 34, 0.15) 86%,
+      rgba(244, 246, 249, 0.45) 95%,
+      #f4f6f9 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(15, 20, 28, 0.45) 0%,
+      rgba(15, 20, 28, 0.14) 52%,
+      rgba(15, 20, 28, 0.04) 100%
+    );
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -552,16 +573,20 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .hero p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 .hero p span {
   letter-spacing: 1px;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid #3898ff;
 }
 
 .hero .social-links {
@@ -569,16 +594,16 @@ section,
 }
 
 .hero .social-links a {
-  font-size: 20px;
+  font-size: 22px;
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
 }
 
 .hero .social-links a:hover {
-  color: var(--accent-color);
+  color: #3898ff;
 }
 
 @media (max-width: 768px) {
@@ -661,40 +686,242 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Skills Section
+# Skills Section (Tree Branch Layout)
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+.skills-tree-col {
+  margin-bottom: 32px;
 }
 
-.skills .progress .skill {
-  color: var(--heading-color);
-  padding: 0;
-  margin: 0 0 6px 0;
+.skills-tree-group {
+  height: 100%;
+}
+
+.skills-tree-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--surface-color);
+  border: 1.5px solid var(--accent-color);
+  border-radius: 6px;
+  padding: 10px 16px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 10px rgba(5, 99, 187, 0.06);
+}
+
+.skills-tree-header i {
+  color: var(--accent-color);
+  font-size: 17px;
+  line-height: 1;
+}
+
+.skills-tree-header h3 {
+  font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
+  letter-spacing: 0.6px;
+  margin: 0;
+  color: var(--heading-color);
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+.skills-tree-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0 0 22px;
+  position: relative;
 }
 
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
+/* Connect top category box directly to the vertical line */
+.skills-tree-list::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 0;
+  height: 8px;
+  width: 2px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 55%);
 }
 
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
+.skills-tree-list li {
+  position: relative;
+  padding: 7px 0 7px 28px;
+}
+
+/* Vertical line coming down from the category header at the top */
+.skills-tree-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+}
+
+/* Stop vertical line cleanly at the horizontal branch of the last item */
+.skills-tree-list li:last-child::before {
+  bottom: 50%;
+}
+
+/* Horizontal line going right from the vertical spine to each skill */
+.skills-tree-list li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+  transform: translateY(-50%);
+  transition: width 0.2s ease, background-color 0.2s ease;
+}
+
+.skills-tree-node {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 86%);
+  border-radius: 5px;
+  padding: 6px 13px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--default-color);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* Small connector dot where the horizontal line meets the skill */
+.skills-tree-node::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
   background-color: var(--accent-color);
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+}
+
+.skills-tree-list li:hover::after {
+  background-color: var(--accent-color);
+}
+
+.skills-tree-list li:hover .skills-tree-node {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateX(3px);
+  box-shadow: 0 3px 12px rgba(5, 99, 187, 0.08);
+}
+
+.skills-tree-list li:hover .skills-tree-node::before {
+  transform: translateY(-50%) scale(1.25);
+}
+
+/*--------------------------------------------------------------
+# Project Cards (Portfolio Section)
+--------------------------------------------------------------*/
+.project-card {
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-top: 3px solid var(--accent-color);
+  border-radius: 6px;
+  padding: 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.project-card-header h4 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--heading-color);
+}
+
+.project-status-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  white-space: nowrap;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-color);
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 65%);
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.project-link-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.project-domain {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 14px;
+}
+
+.project-bullets {
+  padding-left: 18px;
+  margin-bottom: 18px;
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.project-bullets li {
+  margin-bottom: 8px;
+}
+
+.project-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+}
+
+.project-tech-tag {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
 }
 
 /*--------------------------------------------------------------
@@ -984,6 +1211,80 @@ section,
 
 .services .service-item.item-pink:hover .icon path {
   fill: #f3268c;
+}
+
+/* Education Tiles with Campus Background Photos */
+.services .service-item.edu-tile {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+  color: #ffffff;
+  min-height: 300px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.services .service-item.edu-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 16, 24, 0.15) 0%,
+    rgba(10, 16, 24, 0.65) 48%,
+    rgba(10, 16, 24, 0.9) 100%
+  );
+  z-index: -1;
+  transition: background 0.35s ease;
+}
+
+.services .service-item.edu-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.2);
+}
+
+.services .service-item.edu-tile:hover::before {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 16, 24, 0.1) 0%,
+    rgba(10, 16, 24, 0.58) 48%,
+    rgba(10, 16, 24, 0.86) 100%
+  );
+}
+
+.services .service-item.edu-nust {
+  background-image: url("../img/nust-bg.png");
+}
+
+.services .service-item.edu-akhss {
+  background-image: url("../img/akhss-bg.png");
+}
+
+.services .service-item.edu-tile h3 {
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  font-size: 21px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.services .service-item.edu-tile h5 {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.services .service-item.edu-tile p {
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 /*--------------------------------------------------------------

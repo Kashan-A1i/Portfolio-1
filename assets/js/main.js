@@ -187,21 +187,17 @@
   window.addEventListener("load", initSwiper);
 
   /**
-   * Correct scrolling position upon page load for URLs containing hash links.
+   * Always start at the top of the page on load/refresh
    */
-  window.addEventListener('load', function(e) {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+  window.addEventListener('load', function() {
     if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
-        setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
+      history.replaceState(null, '', window.location.pathname + window.location.search);
     }
+    window.scrollTo(0, 0);
   });
 
   /**
