@@ -925,6 +925,66 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Research Experience Section
+--------------------------------------------------------------*/
+.research-card {
+  padding: 32px;
+}
+
+.research-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.research-meta i {
+  margin-right: 4px;
+}
+
+.research-meta-sep {
+  color: color-mix(in srgb, var(--default-color), transparent 65%);
+}
+
+.research-paper-callout {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  border-left: 3px solid var(--accent-color);
+  border-radius: 4px 6px 6px 4px;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+}
+
+.research-paper-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent-color);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.research-paper-title {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--heading-color);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.research-paper-supervisor {
+  font-size: 13.5px;
+  color: color-mix(in srgb, var(--default-color), transparent 22%);
+}
+
+/*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
 .resume .resume-title {
