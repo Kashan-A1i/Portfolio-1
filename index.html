@@ -25,7 +25,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css?v=7" rel="stylesheet">
+  <link href="assets/css/main.css?v=9" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: MyResume
@@ -293,21 +293,35 @@
 
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
 
-          <!-- Project 1: Virtual Heritage Tour -->
+          <!-- Project 1: Posheeda Virsa — Virtual Heritage Tour -->
           <div class="col-lg-6">
             <div class="project-card">
               <div>
                 <div class="project-card-header">
-                  <h4>Virtual Heritage Tour</h4>
+                  <h4>Posheeda Virsa — Virtual Heritage Tour</h4>
                   <span class="project-status-badge">In Progress</span>
                 </div>
-                <div class="project-domain">3D Computer Vision &amp; Photogrammetry</div>
+                <div class="project-domain">3D Computer Vision, Photogrammetry &amp; Cultural Heritage Preservation</div>
+                <p class="project-summary">
+                  <strong>Posheeda Virsa</strong> (<em>“Hidden Heritage”</em>) is an interactive 3D cultural preservation initiative — awarded <strong>1st Position</strong> at the 5th Edition of the <em>Rang</em> Cultural Revitalization Pitch (STEP &amp; Aga Khan Trust for Culture) — that digitally reconstructs historic and endangered architectural heritage sites across Pakistan so anyone can explore them through photorealistic virtual walkthroughs.
+                </p>
                 <ul class="project-bullets">
                   <li>Developed an end-to-end 3D reconstruction pipeline to convert ground-level video recordings and still photography of archaeological sites into real-time interactive walkthroughs.</li>
                   <li>Extracted and preprocessed video frames using OpenCV to eliminate motion-blurred captures and normalize input sequences.</li>
                   <li>Leveraged Structure-from-Motion (SfM) via COLMAP to perform feature matching, solve camera intrinsics/extrinsics, and generate initial sparse point clouds.</li>
                   <li>Trained 3D Gaussian Splatting (3DGS) representations to achieve photorealistic novel view synthesis and high-frame-rate rendering of intricate historical masonry.</li>
                 </ul>
+                <div class="resume-media-grid project-media-grid">
+                  <a href="assets/img/portfolio/posheeda-virsa-home.png" class="glightbox resume-media-thumb" data-gallery="posheeda-virsa-gallery" data-glightbox="title: Posheeda Virsa — Virtual Heritage Platform Landing Page">
+                    <img src="assets/img/portfolio/posheeda-virsa-home.png?v=2" alt="Posheeda Virsa Landing Page" loading="lazy">
+                  </a>
+                  <a href="assets/img/portfolio/posheeda-virsa-team-1.jpg" class="glightbox resume-media-thumb" data-gallery="posheeda-virsa-gallery" data-glightbox="title: Posheeda Virsa — The Team (Kashan — Developer &amp; Logic Builder)">
+                    <img src="assets/img/portfolio/posheeda-virsa-team-1.jpg?v=2" alt="Posheeda Virsa Team — Kashan (Developer &amp; Logic Builder)" loading="lazy">
+                  </a>
+                  <a href="assets/img/portfolio/posheeda-virsa-team-2.jpg" class="glightbox resume-media-thumb" data-gallery="posheeda-virsa-gallery" data-glightbox="title: Posheeda Virsa — Research, Media &amp; Leadership Team">
+                    <img src="assets/img/portfolio/posheeda-virsa-team-2.jpg?v=2" alt="Posheeda Virsa Team Members" loading="lazy">
+                  </a>
+                </div>
               </div>
               <div class="project-tech-stack">
                 <span class="project-tech-tag">Python</span>
@@ -326,13 +340,27 @@
                   <h4>Qasida — Media Archival &amp; Content Extraction</h4>
                   <a href="https://theqasida.com" target="_blank" class="project-link-btn">View Project <i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
-                <div class="project-domain">Backend Engineering &amp; System Design</div>
+                <div class="project-domain">Backend Engineering, System Design &amp; Poetic Heritage Archive</div>
+                <p class="project-summary">
+                  A digital archive and discovery platform dedicated to preserving traditional <strong>Qasida</strong> and devotional poetic heritage — indexing multilingual poetic manuscripts, transliterations, translations, and audio/video recitations in a fast, searchable repository with automated OCR lyric extraction from scanned texts.
+                </p>
                 <ul class="project-bullets">
                   <li>Architected a normalized relational schema to index multilingual poetic texts, media links, and metadata with low-latency search querying.</li>
                   <li>Implemented an asynchronous background ingestion pipeline for image uploads, utilizing OCR and image preprocessing to extract lyrics automatically.</li>
                   <li>Designed a lightweight hypermedia architecture (Django + HTMX) for real-time state synchronization and partial updates, minimizing server payload overhead.</li>
                   <li>Optimized database indexing to support fast multilingual search across varied scripts and verse structures.</li>
                 </ul>
+                <div class="resume-media-grid project-media-grid">
+                  <a href="assets/img/portfolio/qasida-home.png" class="glightbox resume-media-thumb" data-gallery="qasida-gallery" data-glightbox="title: Qasida — Multilingual Poetic Archive &amp; Instant Search">
+                    <img src="assets/img/portfolio/qasida-home.png?v=2" alt="Qasida Home &amp; Multilingual Search" loading="lazy">
+                  </a>
+                  <a href="assets/img/portfolio/qasida-poem.png" class="glightbox resume-media-thumb" data-gallery="qasida-gallery" data-glightbox="title: Qasida — Dual-Script (Roman/Arabic) Verse Reader">
+                    <img src="assets/img/portfolio/qasida-poem.png?v=2" alt="Qasida Dual-Script Reader View" loading="lazy">
+                  </a>
+                  <a href="assets/img/portfolio/qasida-player.jpg" class="glightbox resume-media-thumb" data-gallery="qasida-gallery" data-glightbox="title: Qasida — Embedded Recitation Video Player">
+                    <img src="assets/img/portfolio/qasida-player.jpg?v=2" alt="Qasida Embedded Video Player" loading="lazy">
+                  </a>
+                </div>
               </div>
               <div class="project-tech-stack">
                 <span class="project-tech-tag">Python</span>
@@ -352,11 +380,22 @@
                   <h4>Mastuj Chitral</h4>
                   <a href="https://mastujchitral.com" target="_blank" class="project-link-btn">View Project <i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
-                <div class="project-domain">Digital Platform for My Hometown</div>
+                <div class="project-domain">Digital Platform &amp; Cultural Portal for My Hometown</div>
+                <p class="project-summary">
+                  A multilingual community, tourism, and cultural hub built to put Mastuj and Upper Chitral on the digital map — featuring local history, cultural articles, scenic attractions, and travel guides accessible in English, Urdu, and Khowar.
+                </p>
                 <ul class="project-bullets">
                   <li>Attracted 1,200+ visitors in the first 3 months by building a Next.js, React, and Supabase website showcasing articles, attractions, and travel guides with Urdu, English, and Khowar multilingual support.</li>
                   <li>Improved user experience with a responsive Tailwind CSS design and a Supabase-authenticated dashboard for content management.</li>
                 </ul>
+                <div class="resume-media-grid project-media-grid">
+                  <a href="assets/img/portfolio/mastuj-home.png" class="glightbox resume-media-thumb" data-gallery="mastuj-gallery" data-glightbox="title: Mastuj Chitral — Regional News, Culture &amp; Tourism Portal">
+                    <img src="assets/img/portfolio/mastuj-home.png" alt="Mastuj Chitral Landing Page" loading="lazy">
+                  </a>
+                  <a href="assets/img/portfolio/mastuj-articles.png" class="glightbox resume-media-thumb" data-gallery="mastuj-gallery" data-glightbox="title: Mastuj Chitral — Multilingual Articles, Announcements &amp; Live Weather">
+                    <img src="assets/img/portfolio/mastuj-articles.png" alt="Mastuj Chitral Articles and Weather" loading="lazy">
+                  </a>
+                </div>
               </div>
               <div class="project-tech-stack">
                 <span class="project-tech-tag">Next.js</span>
@@ -375,11 +414,25 @@
                   <h4>Bashonu</h4>
                   <a href="https://bashonu.com" target="_blank" class="project-link-btn">View Project <i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
-                <div class="project-domain">Cultural Music Preservation Website</div>
+                <div class="project-domain">Cultural Music Preservation Platform</div>
+                <p class="project-summary">
+                  Named after the Khowar word for <em>“to sing”</em>, <strong>Bashonu</strong> is a cultural music archive and streaming platform dedicated to preserving traditional Chitrali and regional folk songs, artist profiles, and lyrics so indigenous musical heritage isn't lost.
+                </p>
                 <ul class="project-bullets">
                   <li>Shipped a full-stack website utilizing React for the frontend and JavaScript for server-side logic, focusing on user interface design.</li>
                   <li>Integrated Supabase backend for scalable data management with efficient storage, retrieval, and real-time updates.</li>
                 </ul>
+                <div class="resume-media-grid project-media-grid">
+                  <a href="assets/img/portfolio/bashonu-home.png" class="glightbox resume-media-thumb" data-gallery="bashonu-gallery" data-glightbox="title: Bashonu — Cultural Music Archive &amp; Language Filters">
+                    <img src="assets/img/portfolio/bashonu-home.png" alt="Bashonu Music Archive Home" loading="lazy">
+                  </a>
+                  <a href="assets/img/portfolio/bashonu-catalog.png" class="glightbox resume-media-thumb" data-gallery="bashonu-gallery" data-glightbox="title: Bashonu — Regional Folk Song Catalog &amp; Poet Index">
+                    <img src="assets/img/portfolio/bashonu-catalog.png" alt="Bashonu Song Catalog" loading="lazy">
+                  </a>
+                  <a href="assets/img/portfolio/bashonu-player.png" class="glightbox resume-media-thumb" data-gallery="bashonu-gallery" data-glightbox="title: Bashonu — Embedded Video Player &amp; Interactive Reader Toolbar">
+                    <img src="assets/img/portfolio/bashonu-player.png" alt="Bashonu Embedded Video Player" loading="lazy">
+                  </a>
+                </div>
               </div>
               <div class="project-tech-stack">
                 <span class="project-tech-tag">React</span>
@@ -398,10 +451,18 @@
                   <a href="https://ishlogh-app.onrender.com" target="_blank" class="project-link-btn">View Project <i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
                 <div class="project-domain">Folklore &amp; Oral History Preservation Platform</div>
+                <p class="project-summary">
+                  Named after the Khowar word for <em>“folk tale”</em>, <strong>Ishlogh</strong> is an oral history and storytelling platform built to document, archive, and share traditional Chitrali folklore, elders' narratives, and regional legends for future generations.
+                </p>
                 <ul class="project-bullets">
                   <li>Built a folklore and stories preservation platform with cloud media storage, keeping regional oral narratives accessible for future generations.</li>
                   <li>Integrated Backblaze cloud storage with a Django backend for reliable media hosting and archival management.</li>
                 </ul>
+                <div class="resume-media-grid project-media-grid">
+                  <a href="assets/img/portfolio/ishlogh-home.jpg" class="glightbox resume-media-thumb" data-gallery="ishlogh-gallery" data-glightbox="title: Ishlogh — Chitrali Folklore &amp; Oral History Archive">
+                    <img src="assets/img/portfolio/ishlogh-home.jpg" alt="Ishlogh Folklore Archive" loading="lazy">
+                  </a>
+                </div>
               </div>
               <div class="project-tech-stack">
                 <span class="project-tech-tag">Django</span>
@@ -577,7 +638,7 @@
                       </p>
                       <h3>1st Position — Cultural Revitalization Project (Rang Expedition)</h3>
                       <h4>STEP (ITREB Pakistan) &amp; Aga Khan Trust for Culture (AKTC)</h4>
-                      <p>Awarded 1st position in the Cultural Revitalization Project Pitch Presentations at the 5th edition of Rang for proposing an interactive 3D Virtual Heritage Tour of historical sites, launching a 6-month implementation phase.</p>
+                      <p>Awarded 1st position in the Cultural Revitalization Project Pitch Presentations at the 5th edition of Rang for proposing <em>Posheeda Virsa</em> — an interactive 3D Virtual Heritage Tour of historical sites, launching a 6-month implementation phase.</p>
                     </div>
                   </div>
                 </div>
@@ -622,7 +683,7 @@
               <ul>
                 <li>Selected for an 8-day national residential heritage and diversity fellowship (<em>Exploring Culture, Celebrating Diversity</em>) uniting students from across Pakistan in Hunza and Lahore.</li>
                 <li>Studied architectural conservation and traditional craftsmanship hands-on at Altit Fort, Lahore Fort, and Shalimar Gardens alongside heritage preservationists and local elders.</li>
-                <li>Won <strong>1st Position</strong> in the <em>Cultural Revitalization Project</em> Pitch Presentations by proposing a 3D Virtual Heritage Tour of historical sites, securing a 6-month project development track.</li>
+                <li>Won <strong>1st Position</strong> in the <em>Cultural Revitalization Project</em> Pitch Presentations by proposing <strong>Posheeda Virsa</strong> (a 3D Virtual Heritage Tour of historical sites), securing a 6-month project development track.</li>
               </ul>
               <div class="resume-media-grid">
                 <a href="assets/img/rang-altit-fort.jpg" class="glightbox resume-media-thumb" data-gallery="rang-gallery">
